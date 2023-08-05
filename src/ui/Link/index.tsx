@@ -24,6 +24,7 @@ export interface ButtonProps extends LinkProps {
   underline?: boolean;
   size?: ButtonSize;
   shape?: keyof typeof BUTTON_SHAPES;
+  outlined?: boolean;
 }
 
 const Link: FC<ButtonProps> = ({
@@ -33,6 +34,7 @@ const Link: FC<ButtonProps> = ({
   underline = false,
   color = "default",
   size,
+  outlined = false,
   shape,
   ...props
 }) => (
@@ -43,6 +45,7 @@ const Link: FC<ButtonProps> = ({
       underline ? "underline underline-offset-2" : "no-underline",
       size && BUTTON_SIZES[size],
       shape && BUTTON_SHAPES[shape],
+      outlined && "btn-outline",
       className
     )}
     {...props}

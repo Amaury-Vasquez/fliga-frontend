@@ -8,17 +8,14 @@ module.exports = {
     "./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   daisyui: {
-    themes: [
-      "dracula",
-      "winter",
-      "night",
-      "emerald",
-      "synthwave",
-      "aqua",
-      "halloween",
-      "corporate",
-      "coffee",
-    ],
+    themes: ["winter", "dracula", "dark", "emerald"],
+  },
+  theme: {
+    extend: {
+      minHeight: {
+        content: "calc(100vh - 64px)",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
