@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HTMLProps, forwardRef } from "react";
+import { HTMLProps, ReactNode, forwardRef } from "react";
 import ErrorMessage from "../ErrorMessage";
 import Label from "../Label";
 
@@ -12,6 +12,7 @@ export const INPUT_VARIANTS = {
   success: "input-success",
   warning: "input-warning",
   error: "input-error",
+  base: "",
 };
 
 export const INPUT_SIZES = {
@@ -27,8 +28,10 @@ export interface InputProps extends Omit<HTMLProps<HTMLInputElement>, "size"> {
   bordered?: boolean;
   error?: string;
   className?: string;
-  type?: "text" | "password" | "email" | "number" | "tel";
+  type?: "text" | "password" | "email" | "number" | "tel" | "date";
   size?: keyof typeof INPUT_SIZES;
+  password?: ReactNode;
+  containerClassName?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -39,14 +42,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       error,
       bordered = true,
       size = "md",
-      variant,
+      variant = "base",
+      password,
       className,
+      containerClassName,
       ...props
     },
     ref
   ) => (
-    <div className="flex flex-col text-left">
-      {label && <Label text="label" />}
+    <div className={clsx("flex flex-col text-left", containerClassName)}>
+      {label && <Label text={label} />}
       <input
         className={clsx(
           "input text-left",
@@ -67,3 +72,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 export default Input;
+export { default as PasswordInput } from "./PasswordInput";

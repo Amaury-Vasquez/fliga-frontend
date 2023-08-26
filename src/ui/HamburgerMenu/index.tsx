@@ -16,8 +16,8 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ menu, className }) => {
     <div className={clsx("relative", className)}>
       <button
         className={clsx(
-          "p-2 w-fit hover:bg-base-200 rounded-full focus-visible:ring-offset-2 focus-visible:ring-primary",
-          isActive && "bg-base-200"
+          "p-2 w-fit text-secondary hover:bg-opacity-50 hover:shadow-md hover:shadow-base-100 transition-all rounded-full focus-visible:ring-offset-2 focus-visible:ring-primary",
+          isActive && "shadow shadow-base-100 bg-base-300"
         )}
         onClick={toggle}
       >
@@ -27,7 +27,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ menu, className }) => {
           <MdOutlineMenu className="w-8 h-8" />
         )}
       </button>
-      {isActive && <div className="absolute top-full mt-0.5">{menu}</div>}
+      {isActive && <div className="absolute top-full mt-4">{menu}</div>}
     </div>
   );
 };

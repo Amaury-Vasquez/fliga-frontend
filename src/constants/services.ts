@@ -20,3 +20,12 @@ export const SERVICES = [
     path: "/ligas",
   },
 ];
+
+export const SERVICES_INFO = [
+  "Editor de alineaciones",
+  "Registro de ligas, equipos y jugadores",
+  "Registro de resultados",
+  "Estadísticas de jugadores y equipos",
+  "Sugerencias de alineaciones",
+  "Sugerencias de jugadas",
+];

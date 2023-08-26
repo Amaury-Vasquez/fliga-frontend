@@ -42,12 +42,12 @@ export const TEXT_COLORS = {
   primary: "text-primary",
   secondary: "text-secondary",
   accent: "text-accent",
-  neutral: "text-neutral",
   info: "text-info",
   success: "text-success",
   warning: "text-warning",
   error: "text-error",
   base: "text-base-content",
+  neutral: "text-neutral",
   default: "",
 };
 

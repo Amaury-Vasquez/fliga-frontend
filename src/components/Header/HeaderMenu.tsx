@@ -16,7 +16,11 @@ const HeaderMenu: FC = () => {
     <HamburgerMenu
       menu={
         <nav>
-          <Menu className="w-52" items={menuItems} itemsPrefix="header-menu" />
+          <Menu
+            className="w-52 bg-base-300 shadow shadow-base-300 p-2"
+            items={menuItems}
+            itemsPrefix="header-menu"
+          />
         </nav>
       }
     />

@@ -21,7 +21,11 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     { children, showCloseButton, position = "center", className, ...props },
     ref
   ) => (
-    <dialog className="modal relative" {...props} ref={ref}>
+    <dialog
+      className="modal fixed inset-0 w-screen h-screen bg-opacity-70 bg-base-300"
+      {...props}
+      ref={ref}
+    >
       <form
         method="dialog"
         className={clsx(

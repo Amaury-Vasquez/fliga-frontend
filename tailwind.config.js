@@ -6,6 +6,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/styles/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   daisyui: {
     themes: ["winter", "dracula", "dark", "emerald"],
@@ -13,7 +14,7 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
-        content: "calc(100vh - 64px)",
+        content: "calc(100vh - 82px)",
       },
     },
   },
